@@ -1,6 +1,6 @@
-# Sonatype Nexus3 Docker: sonatype/nexus3
+# DarthHater's Sonatype Nexus3 Docker: darthhater/nexus3
 
-A Dockerfile for Sonatype Nexus Repository Manager 3, based on CentOS.
+A series of example Dockerfiles for Sonatype Nexus Repository Manager 3.
 
 * [Notes](#notes)
   * [Persistent Data](#persistent-data)
@@ -10,7 +10,7 @@ A Dockerfile for Sonatype Nexus Repository Manager 3, based on CentOS.
 To run, binding the exposed port 8081 to the host.
 
 ```
-$ docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+$ docker run -d -p 8081:8081 --name nexus darthhater/nexus3
 ```
 
 To test:
@@ -19,15 +19,17 @@ To test:
 $ curl -u admin:admin123 http://localhost:8081/service/metrics/ping
 ```
 
-To (re)build the image:
+To (re)build the image(s):
 
 Copy the Dockerfile and do the build-
 
 ```
-$ docker build --rm=true --tag=sonatype/nexus3 .
+$ docker build --rm=true --tag=darthhater/nexus3 .
 ```
 
 ## Notes
+
+* This repo learns and leans heavily on sonatype/nexus3. Expect updates from that repo to make it here slower.
 
 * Default credentials are: `admin` / `admin123`
 
@@ -56,7 +58,7 @@ process, which runs as UID 200.
   These can be used supplied at runtime to control the JVM:
 
   ```
-  $ docker run -d -p 8081:8081 --name nexus -e JAVA_MAX_MEM=768m sonatype/nexus3
+  $ docker run -d -p 8081:8081 --name nexus -e JAVA_MAX_MEM=768m darthhater/nexus3
   ```
 
 * Another environment variable can be used to control the Nexus Context Path
@@ -66,7 +68,7 @@ process, which runs as UID 200.
   This can be supplied at runtime:
 
   ```
-  $ docker run -d -p 8081:8081 --name nexus -e NEXUS_CONTEXT=nexus sonatype/nexus3
+  $ docker run -d -p 8081:8081 --name nexus -e NEXUS_CONTEXT=nexus darthhater/nexus3
   ```
 
 ### Persistent Data
@@ -81,7 +83,7 @@ for additional information.
 
   ```
   $ docker volume create --name nexus-data
-  $ docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3
+  $ docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data darthhater/nexus3
   ```
 
   2. *Mount a host directory as the volume*.  This is not portable, as it
@@ -91,7 +93,7 @@ for additional information.
 
   ```
   $ mkdir /some/dir/nexus-data && chown -R 200 /some/dir/nexus-data
-  $ docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
+  $ docker run -d -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data darthhater/nexus3
   ```
 
 ### Build Args
@@ -106,8 +108,6 @@ docker build --rm --tag nexus-custom --build-arg NEXUS_VERSION=3.x.y --build-arg
 
 ## Getting Help
 
-Looking to contribute to our Docker image but need some help? There's a few ways to get information or our attention:
-
-* File a public issue [here on GitHub](https://github.com/sonatype/docker-nexus3/issues)
-* Check out the [Nexus3](http://stackoverflow.com/questions/tagged/nexus3) tag on Stack Overflow
-* Check out the [Nexus Repository User List](https://groups.google.com/a/glists.sonatype.com/forum/?hl=en#!forum/nexus-users)
+Welp, this was made out of the kindness of my own heart. I'll be clear, this is not supported by Sonatype and support by me is 
+highly dependent on time available (not a ton), and willingness inside the community to help out. SOOOOO, that said, don't go 
+barking to Sonatype for help, you are using these images at your own risk tolerance. DOOOOO file issues here, and get involved!
