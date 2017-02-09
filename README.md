@@ -2,6 +2,12 @@
 
 A series of example Dockerfiles for Sonatype Nexus Repository Manager 3.
 
+## Tags and their Dockerfiles
+
+- [`3.2.0-alpine`, `3.2-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/alpine/Dockerfile)
+- [`3.2.0-centos`, `3.2-centos` (*3.2/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/centos/Dockerfile)
+- [`3.2.0-ubuntu`, `3.2-ubuntu` (*3.2/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/ubuntu/Dockerfile)
+
 * [Notes](#notes)
   * [Persistent Data](#persistent-data)
   * [Build Args](#build-args)
