@@ -10,6 +10,9 @@ A series of example Dockerfiles for Sonatype Nexus Repository Manager 3.
 
 ## Tell me more
 
+Firstly, these images and Dockerfiles are meant as examples and are not supported in any way, shape, or form. If you need a supported 
+Docker image, you should head over to the [Sonatype image](https://hub.docker.com/r/sonatype/nexus3/)
+
 * [Notes](#notes)
   * [Persistent Data](#persistent-data)
   * [Build Args](#build-args)
@@ -116,6 +119,7 @@ docker build --rm --tag nexus-custom --build-arg NEXUS_VERSION=3.x.y --build-arg
 
 ## Getting Help
 
-Welp, this was made out of the kindness of my own heart. I'll be clear, this is not supported by Sonatype and support by me is 
-highly dependent on time available (not a ton), and willingness inside the community to help out. SOOOOO, that said, don't go 
-barking to Sonatype for help, you are using these images at your own risk tolerance. DOOOOO file issues here, and get involved!
+Welp, this was made out of the kindness of my own heart. I'll be clear, this is not supported by Sonatype.
+SOOOOO, that said, don't go barking to Sonatype for help, you are using these images at your own risk tolerance. 
+DOOOOO file issues here, and get involved, if you find a problem. This is open source and hopefully the community 
+will come to the rescue for those things that are useful.
