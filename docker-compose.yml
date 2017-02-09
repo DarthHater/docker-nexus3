@@ -2,7 +2,7 @@ version: "2"
 
 services:
   nexus:
-    image: darthhater/nexus3
+    image: darthhater/nexus3:3.2-centos
     volumes:
       - "nexus-data:/nexus-data"
     ports:
