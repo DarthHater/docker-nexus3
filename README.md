@@ -4,13 +4,18 @@ A series of example Dockerfiles for Sonatype Nexus Repository Manager 3.
 
 ## Tags and their Dockerfiles
 
-- [`3.2.0-alpine`, `3.2-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/alpine/Dockerfile)
-- [`3.2.0-centos`, `3.2-centos` (*3.2/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/centos/Dockerfile)
-- [`3.2.0-ubuntu`, `3.2-ubuntu` (*3.2/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/ubuntu/Dockerfile)
+- [`3.2.0-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/alpine/Dockerfile)
+- [`3.2.0-centos` (*3.2/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/centos/Dockerfile)
+- [`3.2.0-ubuntu` (*3.2/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/ubuntu/Dockerfile)
+- [`3.2.1-alpine`, `3.2-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/alpine/Dockerfile)
+- [`3.2.1-centos`, `3.2-centos` (*3.2/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/centos/Dockerfile)
+- [`3.2.1-ubuntu`, `3.2-ubuntu` (*3.2/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/ubuntu/Dockerfile)
 
 ## Tell me more
 
 Firstly, these images and Dockerfiles are meant as examples and are not supported in any way, shape, or form. If you need a supported Docker image, you should head over to the [Sonatype image](https://hub.docker.com/r/sonatype/nexus3/)
+
+Secondly, I'm practicing semver with the tags. If you choose 3.2, you'll get minor updates like 3.2.1 for example. If you need to be stuck to an exact version, use the full version ala 3.2.0 or 3.2.1 :)
 
 * [Notes](#notes)
   * [Persistent Data](#persistent-data)
