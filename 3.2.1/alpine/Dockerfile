@@ -16,7 +16,7 @@ ARG JAVA_VERSION_BUILD=15
 ARG GLIBC_VERSION=2.23-r3 
 ARG JAVA_URL=http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/server-jre-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz
 ARG GLIBC_URL=https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}
-ARG NEXUS_VERSION=3.2.0-01
+ARG NEXUS_VERSION=3.2.1-01
 ARG NEXUS_DOWNLOAD_URL=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
 ARG BUILD_DEPENDENCIES="curl tar"
 
