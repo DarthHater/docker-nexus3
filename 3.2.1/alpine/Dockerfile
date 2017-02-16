@@ -10,10 +10,10 @@ ENV JAVA_HOME=/opt/java \
 ENV NEXUS_HOME=${SONATYPE_DIR}/nexus \
     SONATYPE_WORK=${SONATYPE_DIR}/sonatype-work
 
-ARG JAVA_VERSION_MAJOR=8 
+ARG JAVA_VERSION_MAJOR=8
 ARG JAVA_VERSION_MINOR=112 
 ARG JAVA_VERSION_BUILD=15 
-ARG GLIBC_VERSION=2.23-r3 
+ARG GLIBC_VERSION=2.23-r3
 ARG JAVA_URL=http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/server-jre-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz
 ARG GLIBC_URL=https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}
 ARG NEXUS_VERSION=3.2.1-01
@@ -36,27 +36,7 @@ RUN mkdir -p /opt && \
  curl --fail --silent --location --retry 3 \
          --header "Cookie: oraclelicense=accept-securebackup-cookie; " ${JAVA_URL} \
     | tar -xz -C /opt && \
- ln -s /opt/jdk1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR} ${JAVA_HOME} && \
- rm -rf /opt/jdk/*src.zip \
-        /opt/jdk/lib/missioncontrol \
-        /opt/jdk/lib/visualvm \
-        /opt/jdk/lib/*javafx* \
-        /opt/jdk/jre/lib/plugin.jar \
-        /opt/jdk/jre/lib/ext/jfxrt.jar \
-        /opt/jdk/jre/bin/javaws \
-        /opt/jdk/jre/lib/javaws.jar \
-        /opt/jdk/jre/lib/desktop \
-        /opt/jdk/jre/plugin \
-        /opt/jdk/jre/lib/deploy* \
-        /opt/jdk/jre/lib/*javafx* \
-        /opt/jdk/jre/lib/*jfx* \
-        /opt/jdk/jre/lib/amd64/libdecora_sse.so \
-        /opt/jdk/jre/lib/amd64/libprism_*.so \
-        /opt/jdk/jre/lib/amd64/libfxplugins.so \
-        /opt/jdk/jre/lib/amd64/libglass.so \
-        /opt/jdk/jre/lib/amd64/libgstreamer-lite.so \
-        /opt/jdk/jre/lib/amd64/libjavafx*.so \
-        /opt/jdk/jre/lib/amd64/libjfx*.so
+ ln -s /opt/jdk1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR} ${JAVA_HOME}
 
 # install nexus
 RUN mkdir -p ${NEXUS_HOME} && \
