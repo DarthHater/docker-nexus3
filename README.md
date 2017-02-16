@@ -47,7 +47,7 @@ $ docker build --rm=true --tag=darthhater/nexus3 .
 * This repo learns and leans heavily on sonatype/nexus3. Expect updates from that repo to make it here slower.
 
 * New Dockerfiles can be generated from the templates by running `update.sh`.
-    - Example to update: `./update.sh -n 3.3.1-01 -b 8 -l 112 -s 15 -g 2.23-r3`
+    - Example to update: `./update.sh -n 3.2.1-01 -b 8 -l 112 -s 15 -g 2.23-r3`
         - n) NEXUS_VERSION
         - b) VERSION_MAJOR (Java)
         - l) VERSION_MINOR (Java)
