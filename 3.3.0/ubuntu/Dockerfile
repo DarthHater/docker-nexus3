@@ -1,19 +1,20 @@
-FROM       centos:centos7
+FROM       ubuntu:yakkety
 
 MAINTAINER Jeffry Hesse <jeffryxtron+docker@gmail.com>
 
-ARG NEXUS_VERSION=%%NEXUS_VERSION%%
+ARG NEXUS_VERSION=3.3.0-01
 ARG NEXUS_DOWNLOAD_URL=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
+ARG BUILD_DEPENDENCIES="curl tar"
 
-RUN yum install -y \
-  curl tar \
-  && yum clean all
+RUN apt-get update && apt-get install -y \
+  ${BUILD_DEPENDENCIES} \
+  && apt-get clean ${BUILD_DEPENDENCIES}
 
 # configure java runtime
 ENV JAVA_HOME=/opt/java \
-  JAVA_VERSION_MAJOR=%%VERSION_MAJOR%% \
-  JAVA_VERSION_MINOR=%%VERSION_MINOR%% \
-  JAVA_VERSION_BUILD=%%VERSION_BUILD%%
+  JAVA_VERSION_MAJOR=8 \
+  JAVA_VERSION_MINOR=112 \
+  JAVA_VERSION_BUILD=15
 
 # configure nexus runtime
 ENV SONATYPE_DIR=/opt/sonatype
