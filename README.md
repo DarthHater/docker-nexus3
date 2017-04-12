@@ -7,9 +7,12 @@ A series of example Dockerfiles for Sonatype Nexus Repository Manager 3.
 - [`3.2.0-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/alpine/Dockerfile)
 - [`3.2.0-centos` (*3.2/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/centos/Dockerfile)
 - [`3.2.0-ubuntu` (*3.2/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2/ubuntu/Dockerfile)
-- [`3.2.1-alpine`, `3.2-alpine` (*3.2/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/alpine/Dockerfile)
-- [`3.2.1-centos`, `3.2-centos` (*3.2/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/centos/Dockerfile)
-- [`3.2.1-ubuntu`, `3.2-ubuntu` (*3.2/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/ubuntu/Dockerfile)
+- [`3.2.1-alpine`, `3.2-alpine` (*3.2.1/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/alpine/Dockerfile)
+- [`3.2.1-centos`, `3.2-centos` (*3.2.1/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/centos/Dockerfile)
+- [`3.2.1-ubuntu`, `3.2-ubuntu` (*3.2.1/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.2.1/ubuntu/Dockerfile)
+- [`3.3.0-alpine`, `3.3-alpine` (*3.3.0/alpine/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.3.0/alpine/Dockerfile)
+- [`3.3.0-centos`, `3.3-centos` (*3.3.0/centos/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.3.0/centos/Dockerfile)
+- [`3.3.0-ubuntu`, `3.3-ubuntu` (*3.3.0/ubuntu/Dockerfile*)](https://github.com/DarthHater/docker-nexus3/blob/master/3.3.0/ubuntu/Dockerfile)
 
 ## Tell me more
 
